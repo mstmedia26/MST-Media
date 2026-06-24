@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MST Media | Digital Marketing Agency</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f172a;
+color:white;
+}
+
+header{
+position:fixed;
+width:100%;
+top:0;
+z-index:1000;
+background:rgba(15,23,42,.95);
+backdrop-filter:blur(10px);
+}
+
+nav{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 20px;
+}
+
+.logo{
+font-size:28px;
+font-weight:800;
+color:#22c55e;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:500;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:100px 20px;
+background:
+linear-gradient(rgba(15,23,42,.85),rgba(15,23,42,.95)),
+url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1500&q=80');
+background-size:cover;
+background-position:center;
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.hero h1{
+font-size:60px;
+font-weight:800;
+line-height:1.2;
+margin-bottom:20px;
+}
+
+.hero span{
+color:#22c55e;
+}
+
+.hero p{
+font-size:18px;
+color:#cbd5e1;
+margin-bottom:35px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 28px;
+background:#22c55e;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:600;
+margin:10px;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+section{
+padding:90px 20px;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+}
+
+.section-title{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+font-weight:800;
+}
+
+.about{
+text-align:center;
+max-width:900px;
+margin:auto;
+}
+
+.about p{
+color:#cbd5e1;
+line-height:1.8;
+}
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#1e293b;
+padding:30px;
+border-radius:15px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+margin-bottom:12px;
+color:#22c55e;
+}
+
+.card p{
+color:#cbd5e1;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+text-align:center;
+}
+
+.stat-box{
+background:#1e293b;
+padding:30px;
+border-radius:15px;
+}
+
+.stat-box h2{
+font-size:40px;
+color:#22c55e;
+}
+
+.process{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.step{
+background:#1e293b;
+padding:25px;
+border-radius:15px;
+}
+
+.step h3{
+color:#22c55e;
+margin-bottom:10px;
+}
+
+.testimonials{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.testimonial{
+background:#1e293b;
+padding:25px;
+border-radius:15px;
+}
+
+.testimonial p{
+color:#cbd5e1;
+margin-bottom:15px;
+}
+
+.contact{
+text-align:center;
+}
+
+.contact a{
+color:#22c55e;
+text-decoration:none;
+}
+
+footer{
+background:#020617;
+padding:25px;
+text-align:center;
+color:#94a3b8;
+}
+
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50%;
+font-size:24px;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:38px;
+}
+
+nav ul{
+display:none;
+}
+
+.section-title{
+font-size:30px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<div class="logo">MST Media</div>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#process">Process</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+
+<h1>Scale Your Business With <span>Digital Marketing</span></h1>
+
+<p>
+We help businesses generate leads, increase sales, and build a powerful online presence through Meta Ads, Social Media Marketing, and Performance Marketing.
+</p>
+
+<a href="#contact" class="btn">Book Free Consultation</a>
+<a href="#services" class="btn">Our Services</a>
+
+</div>
+</section>
+
+<section id="about">
+<div class="container">
+
+<h2 class="section-title">About MST Media</h2>
+
+<div class="about">
+<p>
+Founded by Swastik Tyagi, MST Media is a results-driven digital marketing agency helping brands grow through innovative marketing strategies, Meta Ads, social media management, lead generation, content creation, and website development.
+</p>
+</div>
+
+</div>
+</section>
+
+<section id="services">
+<div class="container">
+
+<h2 class="section-title">Our Services</h2>
+
+<div class="services-grid">
+
+<div class="card">
+<h3>Meta Ads</h3>
+<p>High-converting Facebook & Instagram ad campaigns.</p>
+</div>
+
+<div class="card">
+<h3>Lead Generation</h3>
+<p>Generate quality leads for your business consistently.</p>
+</div>
+
+<div class="card">
+<h3>Social Media Management</h3>
+<p>Professional management of your social media presence.</p>
+</div>
+
+<div class="card">
+<h3>Content Creation</h3>
+<p>Creative graphics, reels, and engaging content.</p>
+</div>
+
+<div class="card">
+<h3>Website Development</h3>
+<p>Modern websites designed for conversions.</p>
+</div>
+
+<div class="card">
+<h3>Branding</h3>
+<p>Build a premium and recognizable brand identity.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2 class="section-title">Our Results</h2>
+
+<div class="stats">
+
+<div class="stat-box">
+<h2>50+</h2>
+<p>Campaigns Managed</p>
+</div>
+
+<div class="stat-box">
+<h2>20+</h2>
+<p>Businesses Served</p>
+</div>
+
+<div class="stat-box">
+<h2>1000+</h2>
+<p>Leads Generated</p>
+</div>
+
+<div class="stat-box">
+<h2>95%</h2>
+<p>Client Satisfaction</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="process">
+<div class="container">
+
+<h2 class="section-title">How We Work</h2>
+
+<div class="process">
+
+<div class="step">
+<h3>01. Business Analysis</h3>
+<p>Understanding your goals and target audience.</p>
+</div>
+
+<div class="step">
+<h3>02. Strategy Planning</h3>
+<p>Creating a customized growth strategy.</p>
+</div>
+
+<div class="step">
+<h3>03. Campaign Launch</h3>
+<p>Launching optimized campaigns and content.</p>
+</div>
+
+<div class="step">
+<h3>04. Scale & Optimize</h3>
+<p>Improving performance and maximizing ROI.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2 class="section-title">Client Testimonials</h2>
+
+<div class="testimonials">
+
+<div class="testimonial">
+<p>
+"MST Media helped us generate quality leads through Meta Ads. Highly recommended."
+</p>
+<strong>Client Review</strong>
+</div>
+
+<div class="testimonial">
+<p>
+"Professional team, great communication, and excellent results."
+</p>
+<strong>Business Owner</strong>
+</div>
+
+<div class="testimonial">
+<p>
+"Our online presence improved significantly after working with MST Media."
+</p>
+<strong>Startup Founder</strong>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="contact">
+<div class="container contact">
+
+<h2 class="section-title">Let's Grow Your Business</h2>
+
+<p><strong>Phone:</strong> +91 9990411245</p>
+<br>
+
+<p><strong>Email:</strong> mst.media26@gmail.com</p>
+<br>
+
+<p>
+<strong>Instagram:</strong>
+<a href="https://www.instagram.com/mst.mediaaa/" target="_blank">
+@mst.mediaaa
+</a>
+</p>
+
+<br>
+
+<p>
+<strong>LinkedIn:</strong>
+<a href="https://www.linkedin.com/company/mst-media" target="_blank">
+MST Media
+</a>
+</p>
+
+<br>
+
+<p><strong>Location:</strong> Noida, India</p>
+
+</div>
+</section>
+
+<footer>
+© 2026 MST Media. All Rights Reserved.
+</footer>
+
+<a class="whatsapp" href="https://wa.me/919990411245" target="_blank">
+💬
+</a>
+
+</body>
+</html>
