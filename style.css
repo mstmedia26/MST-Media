@@ -175,7 +175,9 @@ margin:auto;
 
 .logo img{
 
-height:55px;
+height:42px;
+   width:auto;
+   object-fit:correction;
 
 }
 
@@ -950,7 +952,9 @@ margin-bottom:50px;
 
 .footer-logo{
 
-height:70px;
+height:60px;
+   width:auto;
+   display:block;
 margin:auto;
 margin-bottom:20px;
 
