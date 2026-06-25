@@ -1,593 +1,431 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MST Media | Digital Marketing Agency</title>
+
+<title>MST Media | Marketing That Matters</title>
+
+<meta name="description" content="MST Media is a digital marketing agency helping businesses grow with Meta Ads, branding, content creation, websites and lead generation.">
+
+<meta name="keywords" content="Digital Marketing, Meta Ads, Social Media Marketing, Website Development, Branding, Lead Generation">
+
+<meta name="author" content="Swastik Tyagi">
+
+<link rel="icon" href="logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Manrope',sans-serif;
-scroll-behavior:smooth;
-}
 
-body{
-background:#09090B;
-color:#FAFAFA;
-  overflow-x:hidden;
-}
+<link rel="stylesheet" href="style.css">
 
-header{
-
-position:fixed;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-z-index:999;
-
-background:rgba(9,9,11,.65);
-
-backdrop-filter:blur(30px);
-
--webkit-backdrop-filter:blur(30px);
-
-border-bottom:1px solid rgba(255,255,255,.08);
-
-transition:.4s;
-
-}
-
-nav{
-max-width:1200px;
-margin:auto;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 20px;
-}
-
-.logo img{
-height:58px;
-width:auto;
-display:block;
-transition:.35s ease;
-filter:drop-shadow(0 0 10px rgba(255,255,255,.08));
-}
-
-.logo img:hover{
-transform:scale(1.05);
-}
-
-nav ul li a{
-
-color:#FAFAFA;
-
-text-decoration:none;
-
-font-size:15px;
-
-font-weight:600;
-
-letter-spacing:.3px;
-
-padding:8px 12px;
-
-border-radius:10px;
-
-transition:.35s;
-
-}
-
-nav ul li a:hover{
-
-background:rgba(255,255,255,.08);
-
-color:#FFFFFF;
-
-}
-
-nav a{
-color:white;
-text-decoration:none;
-font-weight:500;
-}
-
-.hero{
-
-min-height:100vh;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-text-align:center;
-
-padding:140px 20px 100px;
-
-position:relative;
-
-overflow:hidden;
-
-background:
-radial-gradient(circle at top,#1f2937 0%,#09090B 55%,#000000 100%);
-
-}
-  .hero::before{
-
-content:"";
-
-position:absolute;
-
-width:650px;
-
-height:650px;
-
-background:#D4AF37;
-
-filter:blur(220px);
-
-opacity:.08;
-
-border-radius:50%;
-
-top:-180px;
-
-left:50%;
-
-transform:translateX(-50%);
-
-animation:floatGlow 8s ease-in-out infinite;
-
-}
-
-@keyframes floatGlow{
-
-0%{transform:translateX(-50%) translateY(0);}
-50%{transform:translateX(-50%) translateY(35px);}
-100%{transform:translateX(-50%) translateY(0);}
-
-}
-.hero-content{
-max-width:900px;
-}
-
-.hero h1{
-
-font-size:clamp(52px,8vw,90px);
-
-font-weight:800;
-
-line-height:1;
-
-letter-spacing:-3px;
-
-margin-bottom:25px;
-
-position:relative;
-
-z-index:2;
-
-}
-
-.hero span{
-
-color:white;
-
-background:linear-gradient(90deg,#FFFFFF,#D4AF37);
-
--webkit-background-clip:text;
-
--webkit-text-fill-color:transparent;
-
-}
-
-.hero p{
-
-font-size:22px;
-
-line-height:1.8;
-
-color:#A1A1AA;
-
-max-width:760px;
-
-margin:auto;
-
-margin-bottom:45px;
-
-position:relative;
-
-z-index:2;
-
-}
-
-.btn{
-
-display:inline-flex;
-
-align-items:center;
-
-justify-content:center;
-
-padding:18px 38px;
-
-border-radius:999px;
-
-background:white;
-
-color:black;
-
-font-weight:700;
-
-text-decoration:none;
-
-margin:8px;
-
-transition:.4s;
-
-box-shadow:0 10px 30px rgba(255,255,255,.15);
-
-}
-
-.btn:hover{
-
-transform:translateY(-6px) scale(1.02);
-
-box-shadow:0 25px 60px rgba(255,255,255,.2);
-
-}
-
-section{
-padding:90px 20px;
-}
-
-.container{
-max-width:1200px;
-margin:auto;
-}
-
-.section-title{
-text-align:center;
-font-size:40px;
-margin-bottom:50px;
-font-weight:800;
-}
-
-.about{
-text-align:center;
-max-width:900px;
-margin:auto;
-}
-
-.about p{
-color:#cbd5e1;
-line-height:1.8;
-}
-
-.services-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.card{
-
-background:rgba(255,255,255,.05);
-
-backdrop-filter:blur(20px);
-
--webkit-backdrop-filter:blur(20px);
-
-border:1px solid rgba(255,255,255,.08);
-
-border-radius:24px;
-
-padding:40px;
-
-transition:.4s ease;
-
-box-shadow:0 10px 30px rgba(0,0,0,.25);
-
-}
-
-.card:hover{
-
-transform:translateY(-12px);
-
-border-color:rgba(212,175,55,.4);
-
-box-shadow:0 25px 60px rgba(212,175,55,.12);
-
-}
-
-.card h3{
-margin-bottom:12px;
-color:#22c55e;
-}
-
-.card p{
-color:#cbd5e1;
-}
-
-.stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:25px;
-text-align:center;
-}
-
-.stat-box{
-background:#1e293b;
-padding:30px;
-border-radius:15px;
-}
-
-.stat-box h2{
-font-size:40px;
-color:#22c55e;
-}
-
-.process{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.step{
-background:#1e293b;
-padding:25px;
-border-radius:15px;
-}
-
-.step h3{
-color:#22c55e;
-margin-bottom:10px;
-}
-
-.testimonials{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
-}
-
-.testimonial{
-background:#1e293b;
-padding:25px;
-border-radius:15px;
-}
-
-.testimonial p{
-color:#cbd5e1;
-margin-bottom:15px;
-}
-
-.contact{
-text-align:center;
-}
-
-.contact a{
-color:#22c55e;
-text-decoration:none;
-}
-
-footer{
-background:#020617;
-padding:25px;
-text-align:center;
-color:#94a3b8;
-}
-
-.whatsapp{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#25D366;
-color:white;
-padding:15px 18px;
-border-radius:50%;
-font-size:24px;
-text-decoration:none;
-box-shadow:0 5px 15px rgba(0,0,0,.3);
-}
-
-@media(max-width:768px){
-
-.hero h1{
-
-font-size:clamp(52px,8vw,90px);
-
-font-weight:800;
-
-line-height:1;
-
-letter-spacing:-3px;
-
-margin-bottom:25px;
-
-text-shadow:0 0 30px rgba(255,255,255,.08);
-
-}
-
-nav ul{
-display:none;
-}
-
-.section-title{
-
-font-size:52px;
-
-font-weight:800;
-
-letter-spacing:-2px;
-
-margin-bottom:20px;
-
-text-align:center;
-
-color:#fff;
-
-}
+</head>
 
 <body>
 
 <header>
-<nav>
-<div class="logo">
-  <img src="logo.png" alt="MST Media>
-    </div>
 
-<ul>
+<nav class="navbar">
+
+<a href="#" class="logo">
+
+<img src="logo.png" alt="MST Media Logo">
+
+</a>
+
+<ul class="nav-links">
+
 <li><a href="#about">About</a></li>
+
 <li><a href="#services">Services</a></li>
-<li><a href="#process">Process</a></li>
+
+<li><a href="#portfolio">Portfolio</a></li>
+
 <li><a href="#contact">Contact</a></li>
+
 </ul>
+
+<a href="#contact" class="nav-btn">
+Book Strategy Call
+</a>
+
+<div class="menu-btn">
+
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
 </nav>
+
 </header>
 
+
+
+<!-- HERO -->
+
 <section class="hero">
-<div class="hero-content">
+
+<div class="hero-bg"></div>
+
+<div class="container hero-content">
 
 <h1>
-Marketing That<br>
+
+Marketing That
+
 <span>Matters.</span>
+
 </h1>
 
 <p>
-Helping ambitious brands grow through Meta Ads, high-converting websites, creative content, and performance marketing.
+
+Helping ambitious brands grow through Meta Ads,
+creative marketing,
+performance campaigns
+and premium digital experiences.
+
 </p>
 
-<a href="#contact" class="btn">Book a Free Strategy Call</a>
+<div class="hero-buttons">
 
-<a href="#services" class="btn">Explore Our Services</a>
+<a href="#contact" class="primary-btn">
+
+Book Free Consultation
+
+</a>
+
+<a href="#services" class="secondary-btn">
+
+Explore Services
+
+</a>
+
 </div>
+
+</div>
+
 </section>
 
-<section id="about" data-aos="fade-up">
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
 <div class="container">
 
-<h2 class="section-title">About MST Media</h2>
+<div class="section-heading">
 
-<div class="about">
+<p class="section-subtitle">
+
+ABOUT MST MEDIA
+
+</p>
+
+<h2>
+
+We Build Brands That People Remember.
+
+</h2>
+
+</div>
+
+<div class="about-grid">
+
+<div class="about-left">
+
+<h3>
+
+Marketing That Matters.
+
+</h3>
+
 <p>
-Founded by Swastik Tyagi, MST Media is a results-driven digital marketing agency helping brands grow through innovative marketing strategies, Meta Ads, social media management, lead generation, content creation, and website development.
+
+MST Media is a performance-driven digital marketing agency helping businesses increase visibility, generate quality leads and grow through strategic marketing.
+
+We combine creativity, technology and performance to build campaigns that deliver measurable business results.
+
 </p>
+
+<p>
+
+Our expertise includes Meta Ads, Social Media Marketing, Website Development, Branding, Content Creation and Lead Generation.
+
+</p>
+
+</div>
+
+<div class="about-right">
+
+<div class="about-card">
+
+<h4>
+
+Our Mission
+
+</h4>
+
+<p>
+
+Helping businesses grow faster through innovative digital marketing solutions.
+
+</p>
+
+</div>
+
+<div class="about-card">
+
+<h4>
+
+Our Vision
+
+</h4>
+
+<p>
+
+To become one of India's most trusted performance marketing agencies.
+
+</p>
+
 </div>
 
 </div>
+
+</div>
+
+</div>
+
 </section>
 
-<section id="services" data-aos="fade-up">
+
+
+<!-- FOUNDER -->
+
+<section id="founder">
+
 <div class="container">
 
-<h2 class="section-title">Our Services</h2>
+<div class="section-heading">
+
+<p class="section-subtitle">
+
+FOUNDER
+
+</p>
+
+<h2>
+
+Meet Swastik Tyagi
+
+</h2>
+
+</div>
+
+<div class="founder-box">
+
+<div class="founder-image">
+
+<img src="logo.png" alt="Founder">
+
+</div>
+
+<div class="founder-content">
+
+<h3>
+
+Swastik Tyagi
+
+</h3>
+
+<p>
+
+Founder of MST Media.
+
+Passionate about helping businesses scale through Meta Ads, social media marketing, branding, content creation and high-converting websites.
+
+</p>
+
+<a href="#contact" class="primary-btn">
+
+Let's Connect
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+```html
+<!-- SERVICES -->
+
+<section id="services">
+
+<div class="container">
+
+<div class="section-heading">
+
+<p class="section-subtitle">
+OUR SERVICES
+</p>
+
+<h2>
+Digital Solutions That Drive Growth
+</h2>
+
+</div>
 
 <div class="services-grid">
 
-<div class="card">
+<div class="service-card">
+
+<div class="service-icon">📈</div>
+
 <h3>Meta Ads</h3>
-<p>High-converting Facebook & Instagram ad campaigns.</p>
+
+<p>
+High-converting Facebook & Instagram advertising campaigns focused on ROI.
+</p>
+
 </div>
 
-<div class="card">
+<div class="service-card">
+
+<div class="service-icon">🎯</div>
+
 <h3>Lead Generation</h3>
-<p>Generate quality leads for your business consistently.</p>
+
+<p>
+Generate quality leads through performance marketing and optimized funnels.
+</p>
+
 </div>
 
-<div class="card">
-<h3>Social Media Management</h3>
-<p>Professional management of your social media presence.</p>
+<div class="service-card">
+
+<div class="service-icon">📱</div>
+
+<h3>Social Media</h3>
+
+<p>
+Complete Instagram, Facebook and LinkedIn management for consistent brand growth.
+</p>
+
 </div>
 
-<div class="card">
-<h3>Content Creation</h3>
-<p>Creative graphics, reels, and engaging content.</p>
-</div>
+<div class="service-card">
 
-<div class="card">
-<h3>Website Development</h3>
-<p>Modern websites designed for conversions.</p>
-</div>
+<div class="service-icon">🎨</div>
 
-<div class="card">
 <h3>Branding</h3>
-<p>Build a premium and recognizable brand identity.</p>
-</div>
+
+<p>
+Logo design, brand identity and creative strategies that make you stand out.
+</p>
 
 </div>
 
-</div>
-</section>
+<div class="service-card">
 
-<section>
-<div class="container">
+<div class="service-icon">💻</div>
 
-<h2 class="section-title">Our Results</h2>
-
-<div class="stats">
-
-<div class="stat-box">
-<h2>50+</h2>
-<p>Campaigns Managed</p>
-</div>
-
-<div class="stat-box">
-<h2>20+</h2>
-<p>Businesses Served</p>
-</div>
-
-<div class="stat-box">
-<h2>1000+</h2>
-<p>Leads Generated</p>
-</div>
-
-<div class="stat-box">
-<h2>95%</h2>
-<p>Client Satisfaction</p>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<section id="why" data-aos="fade-up">
-
-<div class="container">
-
-<h2 class="section-title">Why Choose MST Media</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Performance Marketing</h3>
-<p>ROI-focused Meta Ads that generate quality leads and measurable business growth.</p>
-</div>
-
-<div class="card">
-<h3>Creative Content</h3>
-<p>Premium social media content designed to increase engagement and build your brand.</p>
-</div>
-
-<div class="card">
 <h3>Website Development</h3>
-<p>Modern responsive websites designed to convert visitors into customers.</p>
+
+<p>
+Premium responsive websites designed for speed, trust and conversions.
+</p>
+
 </div>
 
-<div class="card">
+<div class="service-card">
+
+<div class="service-icon">🎬</div>
+
+<h3>Content Creation</h3>
+
+<p>
+Creative graphics, reels, advertisements and marketing assets for your business.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- WHY CHOOSE US -->
+
+<section id="why">
+
+<div class="container">
+
+<div class="section-heading">
+
+<p class="section-subtitle">
+WHY MST MEDIA
+</p>
+
+<h2>
+Why Businesses Choose Us
+</h2>
+
+</div>
+
+<div class="why-grid">
+
+<div class="why-card">
+
+<h3>Results Driven</h3>
+
+<p>
+Every campaign is focused on generating measurable business growth.
+</p>
+
+</div>
+
+<div class="why-card">
+
+<h3>Creative Strategy</h3>
+
+<p>
+Modern marketing ideas backed by creativity and performance.
+</p>
+
+</div>
+
+<div class="why-card">
+
 <h3>Transparent Reporting</h3>
-<p>Monthly reports with complete transparency and measurable results.</p>
+
+<p>
+Know exactly how every campaign is performing.
+</p>
+
+</div>
+
+<div class="why-card">
+
+<h3>Dedicated Support</h3>
+
+<p>
+Quick communication and continuous optimization.
+</p>
+
 </div>
 
 </div>
@@ -595,122 +433,992 @@ Founded by Swastik Tyagi, MST Media is a results-driven digital marketing agency
 </div>
 
 </section>
-<section id="process" data-aos="fade-up">
+
+
+
+
+
+<!-- RESULTS -->
+
+<section id="results">
+
 <div class="container">
 
-<h2 class="section-title">How We Work</h2>
+<div class="section-heading">
 
-<div class="process">
+<p class="section-subtitle">
+OUR IMPACT
+</p>
 
-<div class="step">
-<h3>01. Business Analysis</h3>
-<p>Understanding your goals and target audience.</p>
-</div>
-
-<div class="step">
-<h3>02. Strategy Planning</h3>
-<p>Creating a customized growth strategy.</p>
-</div>
-
-<div class="step">
-<h3>03. Campaign Launch</h3>
-<p>Launching optimized campaigns and content.</p>
-</div>
-
-<div class="step">
-<h3>04. Scale & Optimize</h3>
-<p>Improving performance and maximizing ROI.</p>
-</div>
+<h2>
+Delivering Measurable Growth
+</h2>
 
 </div>
 
+<div class="stats-grid">
+
+<div class="stat-card">
+
+<h3>100+</h3>
+
+<p>Campaigns Managed</p>
+
 </div>
+
+<div class="stat-card">
+
+<h3>50+</h3>
+
+<p>Happy Clients</p>
+
+</div>
+
+<div class="stat-card">
+
+<h3>5M+</h3>
+
+<p>Ad Reach</p>
+
+</div>
+
+<div class="stat-card">
+
+<h3>95%</h3>
+
+<p>Client Satisfaction</p>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<section>
+
+
+
+
+<!-- PORTFOLIO -->
+
+<section id="portfolio">
+
 <div class="container">
 
-<h2 class="section-title">Client Testimonials</h2>
+<div class="section-heading">
 
-<div class="testimonials">
-
-<div class="testimonial">
-<p>
-"MST Media helped us generate quality leads through Meta Ads. Highly recommended."
+<p class="section-subtitle">
+FEATURED WORK
 </p>
-<strong>Client Review</strong>
+
+<h2>
+Our Recent Projects
+</h2>
+
 </div>
 
-<div class="testimonial">
+<div class="portfolio-grid">
+
+<div class="portfolio-card">
+
+<h3>Real Estate Marketing</h3>
+
 <p>
-"Professional team, great communication, and excellent results."
+Lead generation campaigns for property developers.
 </p>
-<strong>Business Owner</strong>
+
 </div>
 
-<div class="testimonial">
+<div class="portfolio-card">
+
+<h3>Restaurant Branding</h3>
+
 <p>
+Complete digital branding and social media management.
+</p>
+
+</div>
+
+<div class="portfolio-card">
+
+<h3>Fitness Campaign</h3>
+
+<p>
+Meta advertising strategy for gym memberships.
+</p>
+
+</div>
+
+<div class="portfolio-card">
+
+<h3>E-Commerce Growth</h3>
+
+<p>
+Performance marketing focused on sales and conversions.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- TESTIMONIALS -->
+
+<section id="testimonials">
+
+<div class="container">
+
+<div class="section-heading">
+
+<p class="section-subtitle">
+CLIENT REVIEWS
+</p>
+
+<h2>
+What Our Clients Say
+</h2>
+
+</div>
+
+<div class="testimonial-grid">
+
+<div class="testimonial-card">
+
+★★★★★
+
+<p>
+
+"MST Media helped us generate quality leads within weeks. Highly recommended."
+
+</p>
+
+<h4>
+Business Owner
+</h4>
+
+</div>
+
+<div class="testimonial-card">
+
+★★★★★
+
+<p>
+
+"Professional team with outstanding communication and excellent campaign performance."
+
+</p>
+
+<h4>
+Startup Founder
+</h4>
+
+</div>
+
+<div class="testimonial-card">
+
+★★★★★
+
+<p>
+
+"Our social media engagement increased significantly after partnering with MST Media."
+
+</p>
+
+<h4>
+Marketing Client
+</h4>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- =========================
+     SERVICES
+========================== -->
+
+<section id="services">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="subtitle">OUR SERVICES</span>
+
+<h2>Digital Solutions That Drive Growth</h2>
+
+<p>
+We help businesses grow through performance marketing, branding, creative content, and modern digital experiences.
+</p>
+
+</div>
+
+<div class="services-grid">
+
+<div class="service-card">
+
+<div class="service-icon">📈</div>
+
+<h3>Meta Ads</h3>
+
+<p>
+High-converting Facebook & Instagram advertising campaigns focused on ROI.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">🎯</div>
+
+<h3>Lead Generation</h3>
+
+<p>
+Generate qualified leads using optimized campaigns and landing pages.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">📱</div>
+
+<h3>Social Media Marketing</h3>
+
+<p>
+Complete management of Instagram, Facebook and LinkedIn accounts.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">💻</div>
+
+<h3>Website Development</h3>
+
+<p>
+Premium responsive websites built for speed and conversions.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">🎨</div>
+
+<h3>Branding</h3>
+
+<p>
+Build a memorable identity with modern branding strategies.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">🎬</div>
+
+<h3>Content Creation</h3>
+
+<p>
+Professional graphics, reels, advertisements and creative campaigns.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- =========================
+WHY CHOOSE MST MEDIA
+========================== -->
+
+<section id="why">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="subtitle">WHY CHOOSE US</span>
+
+<h2>Why Businesses Choose MST Media</h2>
+
+</div>
+
+<div class="why-grid">
+
+<div class="why-card">
+
+<h3>Performance Driven</h3>
+
+<p>
+Every campaign is designed to generate measurable business growth.
+</p>
+
+</div>
+
+<div class="why-card">
+
+<h3>Creative Strategy</h3>
+
+<p>
+Fresh ideas backed by data, creativity and performance.
+</p>
+
+</div>
+
+<div class="why-card">
+
+<h3>Transparent Reporting</h3>
+
+<p>
+Clear reporting with complete transparency and insights.
+</p>
+
+</div>
+
+<div class="why-card">
+
+<h3>Dedicated Support</h3>
+
+<p>
+Quick communication and continuous campaign optimization.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- =========================
+RESULTS
+========================== -->
+
+<section id="results">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="subtitle">OUR IMPACT</span>
+
+<h2>Results That Matter</h2>
+
+</div>
+
+<div class="stats-grid">
+
+<div class="stat-card">
+
+<h3>100+</h3>
+
+<p>Campaigns Managed</p>
+
+</div>
+
+<div class="stat-card">
+
+<h3>50+</h3>
+
+<p>Happy Clients</p>
+
+</div>
+
+<div class="stat-card">
+
+<h3>5M+</h3>
+
+<p>Ad Reach</p>
+
+</div>
+
+<div class="stat-card">
+
+<h3>95%</h3>
+
+<p>Client Satisfaction</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- =========================
+PORTFOLIO
+========================== -->
+
+<section id="portfolio">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="subtitle">FEATURED PROJECTS</span>
+
+<h2>Our Recent Work</h2>
+
+</div>
+
+<div class="portfolio-grid">
+
+<div class="portfolio-card">
+
+<h3>Real Estate Marketing</h3>
+
+<p>
+Lead generation campaigns for property developers.
+</p>
+
+</div>
+
+<div class="portfolio-card">
+
+<h3>Restaurant Branding</h3>
+
+<p>
+Complete social media branding and content strategy.
+</p>
+
+</div>
+
+<div class="portfolio-card">
+
+<h3>Fitness Campaign</h3>
+
+<p>
+Performance marketing campaigns for gym memberships.
+</p>
+
+</div>
+
+<div class="portfolio-card">
+
+<h3>E-Commerce Growth</h3>
+
+<p>
+Sales-focused Meta Ads and conversion optimization.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- =========================
+TESTIMONIALS
+========================== -->
+
+<section id="testimonials">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="subtitle">TESTIMONIALS</span>
+
+<h2>What Clients Say</h2>
+
+</div>
+
+<div class="testimonial-grid">
+
+<div class="testimonial-card">
+
+★★★★★
+
+<p>
+
+"MST Media helped us generate quality leads within weeks."
+
+</p>
+
+<h4>Business Owner</h4>
+
+</div>
+
+<div class="testimonial-card">
+
+★★★★★
+
+<p>
+
+"Professional communication and excellent campaign performance."
+
+</p>
+
+<h4>Startup Founder</h4>
+
+</div>
+
+<div class="testimonial-card">
+
+★★★★★
+
+<p>
+
 "Our online presence improved significantly after working with MST Media."
+
 </p>
-<strong>Startup Founder</strong>
-</div>
+
+<h4>Marketing Client</h4>
 
 </div>
 
 </div>
+
+</div>
+
+</section>
+<!-- =========================
+FAQ SECTION
+========================= -->
+
+<section id="faq">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="subtitle">
+FAQ
+</span>
+
+<h2>
+Frequently Asked Questions
+</h2>
+
+<p>
+Everything you need to know before working with MST Media.
+</p>
+
+</div>
+
+<div class="faq-grid">
+
+<div class="faq-card">
+
+<h3>
+Do you run Meta Ads?
+</h3>
+
+<p>
+Yes. We create and manage high-performing Facebook and Instagram advertising campaigns focused on leads, sales and ROI.
+</p>
+
+</div>
+
+<div class="faq-card">
+
+<h3>
+Do you build websites?
+</h3>
+
+<p>
+Yes. We develop premium, responsive and SEO-friendly websites for businesses.
+</p>
+
+</div>
+
+<div class="faq-card">
+
+<h3>
+Do you manage social media?
+</h3>
+
+<p>
+Absolutely. We manage Instagram, Facebook and LinkedIn accounts with creative content and growth strategies.
+</p>
+
+</div>
+
+<div class="faq-card">
+
+<h3>
+How can I start working with MST Media?
+</h3>
+
+<p>
+Simply contact us through the form below or WhatsApp us for a free consultation.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<section id="contact" data-aos="fade-up">
-<div class="container contact">
 
-<h2 class="section-title">Let's Grow Your Business</h2>
-  
-<p><strong>Founder:<strong> Swastik Tyagi</p>
-  
-<p><strong>Phone:</strong> +91 9990411245</p>
-<br>
 
-<p><strong>Email:</strong> mst.media26@gmail.com</p>
-<br>
+
+
+<!-- =========================
+CONTACT SECTION
+========================= -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="subtitle">
+
+CONTACT US
+
+</span>
+
+<h2>
+
+Let's Grow Your Business
+
+</h2>
 
 <p>
-<strong>Instagram:</strong>
-<a href="https://www.instagram.com/mst.mediaaa/" target="_blank">
-@mst.mediaaa
-</a>
+
+Ready to scale your business?
+Let's build something amazing together.
+
 </p>
 
-<br>
+</div>
 
-<p>
-<strong>LinkedIn:</strong>
-<a href="https://www.linkedin.com/company/mst-media" target="_blank">
+<div class="contact-grid">
+
+<div class="contact-info">
+
+<h3>
+
 MST Media
-</a>
+
+</h3>
+
+<p>
+
+<strong>Founder</strong><br>
+
+Swastik Tyagi
+
 </p>
 
-<br>
+<p>
 
-<p><strong>Location:</strong> Noida, India</p>
+<strong>Phone</strong><br>
+
+<a href="tel:+919990411245">
+
++91 9990411245
+
+</a>
+
+</p>
+
+<p>
+
+<strong>Email</strong><br>
+
+<a href="mailto:mst.media26@gmail.com">
+
+mst.media26@gmail.com
+
+</a>
+
+</p>
+
+<p>
+
+<strong>Instagram</strong><br>
+
+<a href="https://www.instagram.com/mst.mediaaa/" target="_blank">
+
+@mst.mediaaa
+
+</a>
+
+</p>
+
+<p>
+
+<strong>LinkedIn</strong><br>
+
+<a href="https://www.linkedin.com/company/mst-media/" target="_blank">
+
+MST Media
+
+</a>
+
+</p>
+
+<p>
+
+<strong>Location</strong><br>
+
+Noida, India
+
+</p>
 
 </div>
+
+<div class="contact-form">
+
+<form>
+
+<input
+type="text"
+placeholder="Your Name"
+required>
+
+<input
+type="email"
+placeholder="Email Address"
+required>
+
+<input
+type="tel"
+placeholder="Phone Number">
+
+<textarea
+rows="6"
+placeholder="Tell us about your project..."
+required></textarea>
+
+<button
+type="submit"
+class="primary-btn">
+
+Send Message
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
+<!-- =========================
+FOOTER
+========================= -->
 
 <footer>
-© 2026 MST Media. All Rights Reserved.
+
+<div class="container">
+
+<div class="footer-top">
+
+<img
+src="logo.png"
+alt="MST Media Logo"
+class="footer-logo">
+
+<h2>
+Marketing That Matters.
+</h2>
+
+<p>
+
+MST Media is a performance-driven digital marketing agency helping businesses
+generate leads, increase sales and build powerful brands through Meta Ads,
+social media marketing, branding and website development.
+
+</p>
+
+</div>
+
+<div class="footer-links">
+
+<div>
+
+<h4>Company</h4>
+
+<ul>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#founder">Founder</a></li>
+
+<li><a href="#services">Services</a></li>
+
+<li><a href="#portfolio">Portfolio</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h4>Services</h4>
+
+<ul>
+
+<li>Meta Ads</li>
+
+<li>Lead Generation</li>
+
+<li>Website Development</li>
+
+<li>Branding</li>
+
+<li>Content Creation</li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h4>Contact</h4>
+
+<ul>
+
+<li>
+<a href="tel:+919990411245">
++91 9990411245
+</a>
+</li>
+
+<li>
+<a href="mailto:mst.media26@gmail.com">
+mst.media26@gmail.com
+</a>
+</li>
+
+<li>
+Noida, India
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="footer-social">
+
+<a
+href="https://www.instagram.com/mst.mediaaa/"
+target="_blank">
+
+Instagram
+
+</a>
+
+<a
+href="https://www.linkedin.com/company/mst-media/"
+target="_blank">
+
+LinkedIn
+
+</a>
+
+</div>
+
+<hr>
+
+<p class="copyright">
+
+© 2026 MST Media.
+All Rights Reserved.
+
+</p>
+
+</div>
+
 </footer>
 
-<a class="whatsapp" href="https://wa.me/919990411245" target="_blank">
-💬
-</a>
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-<script>
-AOS.init({
-    duration:1000,
-    once:true,
-    easing:"ease-out"
-});
-</script>
+
+
+
+<!-- =========================
+WHATSAPP FLOATING BUTTON
+========================= -->
+
+<a
+
+href="https://wa.me/919990411245"
+
+class="whatsapp"
+
+target="_blank"
+
+aria-label="Chat on WhatsApp">
+
+💬
+
+</a>
+
+
+
+
+
+<!-- =========================
+BACK TO TOP BUTTON
+========================= -->
+
+<button
+
+id="topBtn"
+
+title="Back to Top">
+
+↑
+
+</button>
+
+
+
+
+
+<!-- =========================
+JAVASCRIPT
+========================= -->
+
+<script src="script.js"></script>
+
 </body>
+
 </html>
