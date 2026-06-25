@@ -6,7 +6,7 @@
 <title>MST Media | Digital Marketing Agency</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 <style>
 *{
 margin:0;
@@ -196,13 +196,13 @@ background:linear-gradient(90deg,#FFFFFF,#D4AF37);
 
 font-size:22px;
 
+line-height:1.8;
+
 color:#A1A1AA;
 
 max-width:760px;
 
 margin:auto;
-
-line-height:1.8;
 
 margin-bottom:45px;
 
@@ -242,9 +242,9 @@ box-shadow:0 10px 30px rgba(255,255,255,.15);
 
 .btn:hover{
 
-transform:translateY(-6px);
+transform:translateY(-6px) scale(1.02);
 
-box-shadow:0 25px 60px rgba(255,255,255,.25);
+box-shadow:0 25px 60px rgba(255,255,255,.2);
 
 }
 
@@ -282,14 +282,33 @@ gap:25px;
 }
 
 .card{
-background:#1e293b;
-padding:30px;
-border-radius:15px;
-transition:.3s;
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(20px);
+
+-webkit-backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:24px;
+
+padding:40px;
+
+transition:.4s ease;
+
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+
 }
 
 .card:hover{
-transform:translateY(-8px);
+
+transform:translateY(-12px);
+
+border-color:rgba(212,175,55,.4);
+
+box-shadow:0 25px 60px rgba(212,175,55,.12);
+
 }
 
 .card h3{
@@ -385,7 +404,19 @@ box-shadow:0 5px 15px rgba(0,0,0,.3);
 @media(max-width:768px){
 
 .hero h1{
-font-size:38px;
+
+font-size:clamp(52px,8vw,90px);
+
+font-weight:800;
+
+line-height:1;
+
+letter-spacing:-3px;
+
+margin-bottom:25px;
+
+text-shadow:0 0 30px rgba(255,255,255,.08);
+
 }
 
 nav ul{
@@ -393,11 +424,20 @@ display:none;
 }
 
 .section-title{
-font-size:30px;
+
+font-size:52px;
+
+font-weight:800;
+
+letter-spacing:-2px;
+
+margin-bottom:20px;
+
+text-align:center;
+
+color:#fff;
+
 }
-}
-</style>
-</head>
 
 <body>
 
@@ -434,7 +474,7 @@ Helping ambitious brands grow through Meta Ads, high-converting websites, creati
 </div>
 </section>
 
-<section id="about">
+<section id="about" data-aos="fade-up">
 <div class="container">
 
 <h2 class="section-title">About MST Media</h2>
@@ -448,7 +488,7 @@ Founded by Swastik Tyagi, MST Media is a results-driven digital marketing agency
 </div>
 </section>
 
-<section id="services">
+<section id="services" data-aos="fade-up">
 <div class="container">
 
 <h2 class="section-title">Our Services</h2>
@@ -521,8 +561,63 @@ Founded by Swastik Tyagi, MST Media is a results-driven digital marketing agency
 
 </div>
 </section>
+  <section id="founder" data-aos="fade-up">
 
-<section id="process">
+<div class="container">
+
+<h2 class="section-title">Meet the Founder</h2>
+
+<div class="card">
+
+<h3>Swastik Tyagi</h3>
+
+<p>
+Founder of MST Media. I help businesses grow through Meta Ads, branding, social media marketing, website development, lead generation, and performance-driven digital marketing strategies.
+</p>
+
+<a href="#contact" class="btn">
+Book a Free Strategy Call
+</a>
+
+</div>
+
+</div>
+
+</section>
+<section id="why" data-aos="fade-up">
+
+<div class="container">
+
+<h2 class="section-title">Why Choose MST Media</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Performance Marketing</h3>
+<p>ROI-focused Meta Ads that generate quality leads and measurable business growth.</p>
+</div>
+
+<div class="card">
+<h3>Creative Content</h3>
+<p>Premium social media content designed to increase engagement and build your brand.</p>
+</div>
+
+<div class="card">
+<h3>Website Development</h3>
+<p>Modern responsive websites designed to convert visitors into customers.</p>
+</div>
+
+<div class="card">
+<h3>Transparent Reporting</h3>
+<p>Monthly reports with complete transparency and measurable results.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+<section id="process" data-aos="fade-up">
 <div class="container">
 
 <h2 class="section-title">How We Work</h2>
@@ -587,7 +682,7 @@ Founded by Swastik Tyagi, MST Media is a results-driven digital marketing agency
 </div>
 </section>
 
-<section id="contact">
+<section id="contact" data-aos="fade-up">
 <div class="container contact">
 
 <h2 class="section-title">Let's Grow Your Business</h2>
@@ -630,6 +725,14 @@ MST Media
 <a class="whatsapp" href="https://wa.me/919990411245" target="_blank">
 💬
 </a>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
+<script>
+AOS.init({
+    duration:1000,
+    once:true,
+    easing:"ease-out"
+});
+</script>
 </body>
 </html>
