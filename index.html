@@ -23,12 +23,27 @@ color:#FAFAFA;
 }
 
 header{
+
 position:fixed;
-width:100%;
+
 top:0;
-z-index:1000;
-background:rgba(15,23,42,.95);
-backdrop-filter:blur(10px);
+
+left:0;
+
+width:100%;
+
+z-index:999;
+
+background:rgba(9,9,11,.65);
+
+backdrop-filter:blur(30px);
+
+-webkit-backdrop-filter:blur(30px);
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+transition:.4s;
+
 }
 
 nav{
@@ -40,16 +55,44 @@ align-items:center;
 padding:18px 20px;
 }
 
-.logo{
-font-size:28px;
-font-weight:800;
-color:#22c55e;
+.logo img{
+height:58px;
+width:auto;
+display:block;
+transition:.35s ease;
+filter:drop-shadow(0 0 10px rgba(255,255,255,.08));
 }
 
-nav ul{
-display:flex;
-list-style:none;
-gap:25px;
+.logo img:hover{
+transform:scale(1.05);
+}
+
+nav ul li a{
+
+color:#FAFAFA;
+
+text-decoration:none;
+
+font-size:15px;
+
+font-weight:600;
+
+letter-spacing:.3px;
+
+padding:8px 12px;
+
+border-radius:10px;
+
+transition:.35s;
+
+}
+
+nav ul li a:hover{
+
+background:rgba(255,255,255,.08);
+
+color:#FFFFFF;
+
 }
 
 nav a{
@@ -264,7 +307,9 @@ font-size:30px;
 
 <header>
 <nav>
-<div class="logo">MST Media</div>
+<div class="logo">
+  <img src="logo.png" alt="MST Media>
+    </div>
 
 <ul>
 <li><a href="#about">About</a></li>
